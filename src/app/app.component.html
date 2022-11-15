@@ -1,4 +1,31 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <h2>Lucas Beserra Dos Santos - 0050831911026</h2>
+  <p>
+    <span *ngIf="timer.getCountMinutos() > 0"
+      >{{ timer.getCountMinutos() }}m</span
+    >
+    {{ timer.getCountSegundos() }}s
+  </p>
+</div>
+<div>
+  <div>
+    <h2>BitCoin$</h2>
+
+    <table>
+      <tr>
+        <th>Data/Hora</th>
+        <th>Real (BRL)</th>
+        <th>Dólar (USD)</th>
+      </tr>
+      <tr *ngFor="let response of BitcoinService.updateList">
+        <td>{{ response.time.updated }}</td>
+        <td>
+          {{ response.bpi.BRL.rate }}
+        </td>
+        <td>
+          {{ response.bpi.USD.rate }}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,17 +1,23 @@
 <div>
-  <h2>Lucas Beserra Dos Santos - 0050831911026</h2>
-  <p>
-    <span *ngIf="timer.getCountMinutos() > 0"
-      >{{ timer.getCountMinutos() }}m</span
-    >
-    {{ timer.getCountSegundos() }}s
-  </p>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"
+        >Lucas Beserra Dos Santos - 0050831911026</span
+      >
+      <p style="color: #FFF; margin-bottom: -4px">
+        <span *ngIf="timer.getCountMinutos() > 0"
+          >{{ timer.getCountMinutos() }}m</span
+        >
+        {{ timer.getCountSegundos() }}s
+      </p>
+    </div>
+  </nav>
 </div>
 <div>
-  <div>
-    <h2>BitCoin$</h2>
+  <div class="">
+    <h1 style="text-align: center"><strong>|BitCoin$</strong></h1>
 
-    <table>
+    <table class="container">
       <tr>
         <th>Data/Hora</th>
         <th>Real (BRL)</th>
